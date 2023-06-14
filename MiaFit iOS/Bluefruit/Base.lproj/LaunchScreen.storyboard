@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHB-Mb-yZi" userLabel="titleView">
+                                <rect key="frame" x="-508.5" y="-248.5" width="1431" height="1303"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" image="info_adafruit_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Qvw-tp-0x9">
+                                        <rect key="frame" x="565" y="380" width="301" height="388"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="301" id="RPL-V2-3UN"/>
+                                            <constraint firstAttribute="height" constant="388" id="kPG-Fg-aNY"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="MiaFit Vaginal Dilator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMH-IR-Ocv">
+                                        <rect key="frame" x="612" y="726" width="207" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="207" id="7AD-08-bcp"/>
+                                            <constraint firstAttribute="height" constant="27" id="cl3-BA-798"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="shadowColor" systemColor="darkTextColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.3943291605" green="0.28099152449999998" blue="0.67454355960000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="Qvw-tp-0x9" firstAttribute="top" secondItem="zHB-Mb-yZi" secondAttribute="top" constant="380" id="008-mY-HNu"/>
+                                    <constraint firstItem="HMH-IR-Ocv" firstAttribute="top" secondItem="zHB-Mb-yZi" secondAttribute="top" constant="726" id="8Z3-sU-j7l"/>
+                                    <constraint firstItem="Qvw-tp-0x9" firstAttribute="centerX" secondItem="HMH-IR-Ocv" secondAttribute="centerX" id="B91-DV-go9"/>
+                                    <constraint firstItem="HMH-IR-Ocv" firstAttribute="centerX" secondItem="zHB-Mb-yZi" secondAttribute="centerX" id="DHp-Py-PWd"/>
+                                    <constraint firstAttribute="trailing" secondItem="HMH-IR-Ocv" secondAttribute="trailing" constant="612" id="Lv1-7x-jVj"/>
+                                    <constraint firstAttribute="bottom" secondItem="HMH-IR-Ocv" secondAttribute="bottom" constant="550" id="RKb-Jg-Tni"/>
+                                    <constraint firstItem="HMH-IR-Ocv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zHB-Mb-yZi" secondAttribute="leading" constant="20" symbolic="YES" id="U7j-UQ-zPE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3943291605" green="0.28099152449999998" blue="0.67454355960000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="zHB-Mb-yZi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" multiplier="0.9" id="6oz-Jy-Dna"/>
+                            <constraint firstItem="zHB-Mb-yZi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="HSh-PI-Odf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50.724637681159422" y="374.33035714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info_adafruit_logo" width="512" height="512"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
