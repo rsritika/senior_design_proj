@@ -201,6 +201,7 @@
 		A9D2344D1E3AD97600DC0C99 /* StyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2344C1E3AD97600DC0C99 /* StyleConfig.swift */; };
 		A9EF0412299BF84F00734A82 /* String+matchingStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF0411299BF84F00734A82 /* String+matchingStrings.swift */; };
 		A9F4E1BD1F04467200BF8A70 /* ISColorWheel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F4E1BB1F04467200BF8A70 /* ISColorWheel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DE207CAB2A4251C100A72664 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE207CAA2A4251AB00A72664 /* libxml2.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -572,6 +573,7 @@
 		A9EF0411299BF84F00734A82 /* String+matchingStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+matchingStrings.swift"; sourceTree = "<group>"; };
 		A9F4E1BA1F04467200BF8A70 /* ISColorWheel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISColorWheel.h; sourceTree = "<group>"; };
 		A9F4E1BB1F04467200BF8A70 /* ISColorWheel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISColorWheel.m; sourceTree = "<group>"; };
+		DE207CAA2A4251AB00A72664 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
 		DE511F22E8F88E565DA29F57 /* Pods-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-macOS/Pods-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -585,6 +587,7 @@
 				A96D5FDF23CC7E79009FB3C7 /* libMagickWand.a in Frameworks */,
 				A96D5FDB23CC7E79009FB3C7 /* libpng.a in Frameworks */,
 				A9A1240223CD0221000C05C0 /* libtiff.a in Frameworks */,
+				DE207CAB2A4251C100A72664 /* libxml2.tbd in Frameworks */,
 				A9A1240323CD0223000C05C0 /* libjpeg.a in Frameworks */,
 				A9A1240123CD00B4000C05C0 /* libz.tbd in Frameworks */,
 			);
@@ -609,6 +612,7 @@
 		898E6F8F0FE679F1B515A766 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE207CAA2A4251AB00A72664 /* libxml2.tbd */,
 				A96D5FE223CC8375009FB3C7 /* libz.tbd */,
 				A96D5FE023CC8344009FB3C7 /* libxml2.tbd */,
 				A945EA6A1E4DF3CA00737BB0 /* libz.tbd */,
