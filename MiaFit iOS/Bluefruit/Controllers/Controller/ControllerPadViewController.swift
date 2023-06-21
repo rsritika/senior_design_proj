@@ -19,6 +19,7 @@ protocol ControllerPadViewControllerDelegate: AnyObject {
 
 class ControllerPadViewController: PeripheralModeViewController {
     
+    
     // Config
     private static let kMaxEntriesPerDataSet = 5000     // Max number of entries per dataset. Older entries will be deteleted
     
