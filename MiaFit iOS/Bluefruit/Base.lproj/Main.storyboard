@@ -800,16 +800,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwq-y9-Agb" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="20" y="224" width="374" height="265"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFj-ta-4f2">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.3943291605" green="0.28099152449999998" blue="0.67454355960000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mwq-y9-Agb" userLabel="Chart View" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="20" y="119" width="374" height="343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="dzA-pK-AcS">
+                                <rect key="frame" x="20" y="456" width="125" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="AutoScroll: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFD-Nk-pkT">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="31"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e9w-yF-nI9">
+                                        <rect key="frame" x="76" y="0.0" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.088944101230000003" green="0.57494231630000003" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="onAutoScrollChanged:" destination="Y9H-cS-16y" eventType="valueChanged" id="DdQ-ez-2Dl"/>
+                                            <action selector="onAutoScrollChanged:" destination="v13-MP-5HC" eventType="valueChanged" id="tEX-2l-NuA"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9OU-bu-Mnv">
                                 <rect key="frame" x="35" y="511.5" width="157.5" height="157.5"/>
                                 <subviews>
@@ -905,6 +924,24 @@
                                 <rect key="frame" x="20" y="694" width="374" height="142"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="PgH-A4-GpX">
+                                <rect key="frame" x="179" y="456" width="297" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Width: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zK4-Sf-RpG">
+                                        <rect key="frame" x="0.0" y="0.0" width="43.5" height="30"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                        <color key="textColor" red="0.79215686269999996" green="0.79215686269999996" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="20" minValue="6" maxValue="100" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iO-Ah-W4G">
+                                        <rect key="frame" x="43.5" y="0.0" width="255.5" height="31"/>
+                                        <connections>
+                                            <action selector="onXScaleValueChanged:" destination="v13-MP-5HC" eventType="valueChanged" id="I4N-hL-51d"/>
+                                            <action selector="onXScaleValueChanged:" destination="Y9H-cS-16y" eventType="valueChanged" id="Mqt-vG-aaw"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xom-4u-hzn"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -939,10 +976,15 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="autoscrollButton" destination="e9w-yF-nI9" id="rG7-fz-8D3"/>
+                        <outlet property="autoscrollLabel" destination="sFD-Nk-pkT" id="Kdu-v6-Nau"/>
+                        <outlet property="chartView" destination="mwq-y9-Agb" id="7gh-RH-iJ8"/>
                         <outlet property="directionsView" destination="9OU-bu-Mnv" id="DRK-qn-cZb"/>
                         <outlet property="numbersView" destination="QJP-ax-g0P" id="8aA-ml-fm3"/>
                         <outlet property="uartTextView" destination="003-Jl-LDe" id="QnI-b7-5zK"/>
                         <outlet property="uartView" destination="I5f-Af-Tpb" id="bBd-Fc-Ov0"/>
+                        <outlet property="widthLabel" destination="zK4-Sf-RpG" id="JLT-2V-3JC"/>
+                        <outlet property="xMaxEntriesSlider" destination="3iO-Ah-W4G" id="TpX-fJ-Fq5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9EJ-Tt-yZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1160,7 +1202,7 @@
                     <connections>
                         <outlet property="autoscrollButton" destination="Hng-Uq-TSB" id="sNP-lc-9Q1"/>
                         <outlet property="autoscrollLabel" destination="Fmp-ca-Jdh" id="Kp2-BS-0Py"/>
-                        <outlet property="chartView" destination="3Hb-vE-7Mw" id="W51-ee-vlk"/>
+                        <outlet property="chartView" destination="3Hb-vE-7Mw" id="QGu-Ja-b0g"/>
                         <outlet property="widthLabel" destination="mFw-Om-vau" id="SpJ-iM-FoN"/>
                         <outlet property="xMaxEntriesSlider" destination="71B-cU-1FB" id="ZJ7-Hf-Kzk"/>
                     </connections>
@@ -2649,7 +2691,7 @@
                                                                     <rect key="frame" x="8" y="8" width="358" height="308"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0m-Pg-Zzv" userLabel="Local Name View">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="358" height="14"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="358" height="50"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Local Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DW-cT-LuK">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="69.5" height="14.5"/>
@@ -2675,7 +2717,7 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fef-4g-Erh" userLabel="Manufacturer View">
-                                                                            <rect key="frame" x="0.0" y="24" width="358" height="15"/>
+                                                                            <rect key="frame" x="0.0" y="60" width="358" height="14"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Manufacturer:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBN-wh-pHY">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="77.5" height="14.5"/>
@@ -2701,7 +2743,7 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yYA-BQ-KiZ" userLabel="Services View">
-                                                                            <rect key="frame" x="0.0" y="49" width="358" height="54.5"/>
+                                                                            <rect key="frame" x="0.0" y="84" width="358" height="54.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Services:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsN-Yx-S0V">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="358" height="14.5"/>
@@ -2733,7 +2775,7 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiS-qZ-Dmv" userLabel="Overflow Services View">
-                                                                            <rect key="frame" x="0.0" y="113.5" width="358" height="50"/>
+                                                                            <rect key="frame" x="0.0" y="148.5" width="358" height="50"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Overflow Services:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD6-Ca-ECO">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="358" height="14.5"/>
@@ -2766,7 +2808,7 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5H7-Ds-NyX" userLabel="Solicited Services View">
-                                                                            <rect key="frame" x="0.0" y="173.5" width="358" height="50"/>
+                                                                            <rect key="frame" x="0.0" y="208.5" width="358" height="50"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Solicited Services:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHl-pi-Qdx">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="358" height="14.5"/>
@@ -2799,7 +2841,7 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VlF-DR-Y4d" userLabel="TX Power Level View">
-                                                                            <rect key="frame" x="0.0" y="233.5" width="358" height="14.5"/>
+                                                                            <rect key="frame" x="0.0" y="268.5" width="358" height="15"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="TX Power Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrR-I0-6aT">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="14.5"/>
@@ -2825,7 +2867,7 @@
                                                                             </constraints>
                                                                         </view>
                                                                         <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tL0-aJ-K7x" userLabel="Connectablel View">
-                                                                            <rect key="frame" x="0.0" y="258" width="358" height="50"/>
+                                                                            <rect key="frame" x="0.0" y="293.5" width="358" height="14.5"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="Connectable:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqv-7o-ddr">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="74" height="50"/>
